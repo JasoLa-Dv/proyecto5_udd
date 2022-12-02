@@ -25,7 +25,7 @@ const Navigation = () => {
                     </Nav>
                     <Nav className="m-3">
                         <Nav.Link as= {NavLink} to="/login">Iniciar sesión</Nav.Link>
-                        <Nav.Link as= {NavLink} to="/register">Registro</Nav.Link>
+                        <Nav.Link as= {NavLink} to="/signup">Registro</Nav.Link>
                         <Nav.Link as= {NavLink} to="/account">Mi Cuenta</Nav.Link>
                     </Nav>
           </Navbar.Collapse>

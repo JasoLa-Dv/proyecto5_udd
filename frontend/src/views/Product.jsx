@@ -2,8 +2,26 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer' 
 import products from '../data/Products'
 import {Link} from 'react-router-dom'
+//import { useState } from 'react'
+//import axios from 'axios'
+
 
 function Product() {
+
+  /* const [products, setProducts] = useState([])
+
+  const obtener = async () => {
+    try{
+        const respuesta = await axios.get('http://localhost:4000(api/productos')
+        console.log(respuesta.data)
+
+    } catch (error) {
+
+    }
+
+
+  } */
+
   return (
     <>
    <Navigation />

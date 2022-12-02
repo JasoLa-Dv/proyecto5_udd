@@ -298,7 +298,7 @@ const products = [
   },
   {
     id: "28",
-    name: "Zapato color verde mullticolor",
+    name: "Zapato color verde multicolor",
     image: "/images/foto_28.jpg",
     description:
       "Zapato Mujer, Hecho a Mano con Cuero (Liso y Texturado) 100 % natural. El interior es forrado completamente con Badana, favoreciendo la transpiración del pie. Talla: 37",

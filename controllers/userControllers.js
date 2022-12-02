@@ -23,7 +23,7 @@ const crearUsuario = async (req, res) => {
 
 const obtenerUsuarios =  async (req, res) => {
     try{
-        const users = await User.find().populate('favProducts')
+        const users = await User.find().populate('')
         res.json({success:true, users})
 
     } catch (error){
