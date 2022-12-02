@@ -1,14 +1,16 @@
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { useEffect } from 'react'
 import CalltoActionSection from '../components/CalltoActionSection'
 
+
 const Home = () => {
+
+  useEffect(()=>{
+    document.title = 'D`Cuero'
+  }, [])
   return (    
 
    <>
-   <Navigation />  
-   <CalltoActionSection />
-   <Footer />
+  <CalltoActionSection />
    </>
     
        

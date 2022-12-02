@@ -1,5 +1,3 @@
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer' 
 import products from '../data/Products'
 import {Link} from 'react-router-dom'
 //import { useState } from 'react'
@@ -24,7 +22,6 @@ function Product() {
 
   return (
     <>
-   <Navigation />
       <div className="container">
         <div className="section">
           <div className="row">
@@ -59,7 +56,6 @@ function Product() {
           </div>
         </div>
       </div>
-   <Footer />
    </>
   )
 }

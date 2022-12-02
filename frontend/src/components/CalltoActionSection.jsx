@@ -5,8 +5,8 @@ const CalltoActionSection = () => {
   return (
     <>
     <Link to={"/products"}>
-    <div className="text-center">
-      <img  src="https://res.cloudinary.com/ddahjf0hr/image/upload/v1669830223/Shoe/Header.jpg" alt="" />
+      <div className="container text-center ">
+      <img  src="https://res.cloudinary.com/ddahjf0hr/image/upload/v1669830223/Shoe/Header.jpg" alt="" width= "100%"/>
       </div>
     </Link>
     

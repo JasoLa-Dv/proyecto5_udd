@@ -1,5 +1,3 @@
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 import products from '../data/Products';
 import { useParams } from "react-router-dom";
 
@@ -13,8 +11,7 @@ const SingleProduct = () => {
     return (
 
         <>
-        <Navigation />
-            <div className="container single-product">
+      <div className="container single-product">
         <div className="row">
           <div className="col-md-6">
             <div className="single-image">
@@ -61,7 +58,7 @@ const SingleProduct = () => {
         </div>
         </div>
         </div>
-         <Footer />
+  
         </>
       );
     };
