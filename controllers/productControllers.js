@@ -13,8 +13,8 @@ const createProduct = async (req, res) => {
 
 const obtenerProduct =  async (req, res) => {
     try{
-        const Products = await Product.find()
-        res.json({success:true, Products})
+        const products = await Product.find()
+        res.json({success:true, products})
 
     } catch (error){
         res.json({success:false, message:error.message})

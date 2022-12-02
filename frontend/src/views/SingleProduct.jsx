@@ -1,12 +1,12 @@
-import products from '../data/Products';
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
-const SingleProduct = () => {
+const SingleProduct = ({ item }) => {
 
-    const { id } = useParams();
-    const product = products.find((product)=> product.id === id)
+  console.log(item)
+  /* const { id } = useParams();
+    const product = products.find(()=> product.id === _d)  */
 
-    const { image, name, description, price, countInStock } = product;
+  const { image, name, description, price, countInStock } = item; 
 
     return (
 
@@ -38,12 +38,12 @@ const SingleProduct = () => {
                     <span>Agotado</span>
                   )}
                   </div>
-                  {product.countInStock > 0 ? (
+                  {countInStock > 0 ? (
                   <>
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Cantidad</h6>
                       <select>
-                        {[...Array(product.countInStock).keys()].map((x) => (
+                        {[...Array(countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
                           </option>
@@ -64,4 +64,4 @@ const SingleProduct = () => {
     };
 
 
-export default SingleProduct
+export default SingleProduct 

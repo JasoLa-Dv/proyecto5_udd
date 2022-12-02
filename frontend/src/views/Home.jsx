@@ -1,19 +1,20 @@
-import { useEffect } from 'react'
+import {  useEffect } from 'react'
 import CalltoActionSection from '../components/CalltoActionSection'
 
 
-const Home = () => {
+
+const Home = ({ token }) => {
+
+
 
   useEffect(()=>{
     document.title = 'D`Cuero'
   }, [])
-  return (    
-
-   <>
-  <CalltoActionSection />
-   </>
-    
-       
+  return ( 
+  <>
+      {/* {context.userState.token ? 'Logueado' : 'Sin Loguear'} */}
+      <CalltoActionSection />
+  </>    
   )
 }
 

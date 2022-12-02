@@ -18,7 +18,7 @@ const crearCuenta = async (user) => {
     }
 
 const logout = () => {
-  console.log('cerrar sesión')
+  dispatch({ type: 'LOGOUT'})
 }
 
 

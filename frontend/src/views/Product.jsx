@@ -1,28 +1,38 @@
-import products from '../data/Products'
 import {Link} from 'react-router-dom'
-//import { useState } from 'react'
-//import axios from 'axios'
+import axios from 'axios'
+import { useContext, useState} from 'react'
+import UserContext from '../context/UserContext'
+import { useEffect } from 'react'
 
 
 function Product() {
 
-  /* const [products, setProducts] = useState([])
+  const context = useContext(UserContext)
+      useEffect(() => {
+        document.title = 'Productos'
+      obtenerPro()
+    },[])
+    
 
-  const obtener = async () => {
+  const [products, setProducts] = useState([])
+
+  const obtenerPro = async () => {
     try{
-        const respuesta = await axios.get('http://localhost:4000(api/productos')
-        console.log(respuesta.data)
+            const respuesta = await axios.get('http://localhost:4000/api/productos/')
+            const { success, products } = respuesta.data
 
-    } catch (error) {
-
+            if(success) {
+              setProducts(products)
+            }
+            console.log(respuesta.data)
+           
+    }catch(error){
+      console.log(error)
     }
-
-
-  } */
-
+  }
+ 
   return (
-    <>
-      <div className="container">
+        <div className="container">
         <div className="section">
           <div className="row">
             <div className="col-lg-12 col-md-12 article">
@@ -30,10 +40,12 @@ function Product() {
                 {products.map((product) => (
                   <div
                     className="shop col-lg-4 col-md-6 col-sm-6"
-                    key={product.id}
-                  >
+                    key={product._id}
+                    item={product}
+                    
+                              >
                     <div className="border-product">
-                      <Link to={`/products/${product.id}`}>
+                      <Link to={`/products/${product._id}`}>
                         <div className="shopBack">
                           <img src={product.image} alt={product.name} />
                         </div>
@@ -41,11 +53,10 @@ function Product() {
 
                       <div className="shoptext">
                         <p>
-                          <Link to={`/products/${product.id}`}>
+                          <Link to={`/products/${product._id}`}>
                             {product.name}
                           </Link>
                         </p>
-
                         <h3>$ {product.price}</h3>
                       </div>
                     </div>
@@ -56,8 +67,7 @@ function Product() {
           </div>
         </div>
       </div>
-   </>
-  )
+ )
 }
 
-export default Product
+export default  Product

@@ -17,6 +17,8 @@ router.route('/usuario/login').post(login)
 
 router.route('/productos')
     .post(auth, createProduct)
+
+router.route('/productos/')
     .get(obtenerProduct)
 
 module.exports = router
